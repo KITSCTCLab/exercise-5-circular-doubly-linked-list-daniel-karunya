@@ -11,23 +11,94 @@ class DoublyCircularLinkedList:
         self.count = 0
 
     def add_at_tail(self, data) -> bool:
-        # Write code here
+        if (self.head == None):
+            temp = Node(data)
+            head = temp
+
+        else:
+            temp = Node(data)
+            temp.previous = head.previous
+            temp.next = head
+            head.previous.next=temp
+            head.previous = temp
+
 
     def add_at_head(self, data) -> bool:
-        # Write code here
+        if (self.head == None):
+            temp = Node(data)
+            head = temp
+
+        else:
+            temp = Node(data)
+            temp.previous = head.previous
+            temp.next = head
+            head.previous.next=temp
+            head.previous = temp
+            head = temp
+
 
     def add_at_index(self, index, data) -> bool:
-        # Write code here
+        ind = 0
+        n = head
+        while(1):
+            if(index ==0):
+                if (self.head == None):
+                    temp = Node(data)
+                    head = temp
+
+                else:
+                    temp = Node(data)
+                    temp.previous = head.previous
+                    temp.next = head
+                    head.previous.next=temp
+                    head.previous = temp
+                    head = temp
+
+            elif(index == ind):
+                break
+            
+            else:
+                ind = ind + 1
+                n = n.next
+            
+        temp = Node(data)
+        temp.previous = n.previous
+        temp.next = n
+        n.previous.next=temp
+        n.previous = temp
+
+        
+
 
     def get(self, index) -> int:
-        # Write code here
+        ind = 0
+        n = head
+        while(1):
+            if(index == ind):
+                break
+            
+            else:
+                ind = ind + 1
+                n = n.next
+
+        return n
 
     def delete_at_index(self, index) -> bool:
-        # Write code here
+        ind = 0
+        n = head
+        while(1):
+            if(index == ind):
+                break
+            
+            else:
+                ind = ind + 1
+                n = n.next
+
+        n.previous.next = n.next
+        n.next.previous = n.previous
 
     def get_previous_next(self, index) -> list:
-        # Write code here
-
+        return True
 
 # Do not change the following code
 operations = []
