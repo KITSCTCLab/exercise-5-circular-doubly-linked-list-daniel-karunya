@@ -21,6 +21,7 @@ class DoublyCircularLinkedList:
             temp.next = self.head
             self.head.previous.next=temp
             self.head.previous = temp
+        return True
 
 
     def add_at_head(self, data) -> bool:
@@ -35,7 +36,8 @@ class DoublyCircularLinkedList:
             self.head.previous.next=temp
             self.head.previous = temp
             self.head = temp
-
+        
+        return True
 
     def add_at_index(self, index, data) -> bool:
         ind = 0
@@ -70,7 +72,7 @@ class DoublyCircularLinkedList:
         n.previous.next=temp
         n.previous = temp
 
-        
+        return True
 
 
     def get(self, index) -> int:
@@ -85,7 +87,7 @@ class DoublyCircularLinkedList:
                 n = n.next
                 break
 
-        return n
+        return n.data
 
     def delete_at_index(self, index) -> bool:
         ind = 0
@@ -103,7 +105,7 @@ class DoublyCircularLinkedList:
         n.next.previous = n.previous
 
     def get_previous_next(self, index) -> list:
-        return True
+        return [0,0]
 
 # Do not change the following code
 operations = []
