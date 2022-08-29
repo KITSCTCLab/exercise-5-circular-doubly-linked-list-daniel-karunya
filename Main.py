@@ -41,7 +41,7 @@ class DoublyCircularLinkedList:
 
     def add_at_index(self, index, data) -> bool:
         ind = 0
-        n = self.head
+        Node(n) = self.head
         while(1):
             if(index ==0):
                 if (self.head == None):
@@ -77,7 +77,7 @@ class DoublyCircularLinkedList:
 
     def get(self, index) -> int:
         ind = 0
-        n = self.head
+        Node(n) = self.head
         while(1):
             if(index == ind):
                 break
@@ -105,7 +105,18 @@ class DoublyCircularLinkedList:
         n.next.previous = n.previous
 
     def get_previous_next(self, index) -> list:
-        return [0,0]
+        ind = 0
+        n = self.head
+        while(1):
+            if(index == ind):
+                break
+            
+            else:
+                ind = ind + 1
+                n = n.next
+                break
+
+        return [n.previous.data , n.next.data]
 
 # Do not change the following code
 operations = []
