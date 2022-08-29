@@ -45,6 +45,7 @@ class DoublyCircularLinkedList:
                 if (self.head == None):
                     temp = Node(data)
                     self.head = temp
+                    break
 
                 else:
                     temp = Node(data)
@@ -53,6 +54,7 @@ class DoublyCircularLinkedList:
                     self.head.previous.next=temp
                     self.head.previous = temp
                     self.head = temp
+                    break
 
             elif(index == ind):
                 break
@@ -60,6 +62,7 @@ class DoublyCircularLinkedList:
             else:
                 ind = ind + 1
                 n = n.next
+                break
             
         temp = Node(data)
         temp.previous = n.previous
@@ -80,6 +83,7 @@ class DoublyCircularLinkedList:
             else:
                 ind = ind + 1
                 n = n.next
+                break
 
         return n
 
@@ -93,6 +97,7 @@ class DoublyCircularLinkedList:
             else:
                 ind = ind + 1
                 n = n.next
+                break
 
         n.previous.next = n.next
         n.next.previous = n.previous
