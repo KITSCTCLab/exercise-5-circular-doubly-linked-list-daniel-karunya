@@ -13,46 +13,46 @@ class DoublyCircularLinkedList:
     def add_at_tail(self, data) -> bool:
         if (self.head == None):
             temp = Node(data)
-            head = temp
+            self.head = temp
 
         else:
             temp = Node(data)
-            temp.previous = head.previous
-            temp.next = head
-            head.previous.next=temp
-            head.previous = temp
+            temp.previous = self.head.previous
+            temp.next = self.head
+            self.head.previous.next=temp
+            self.head.previous = temp
 
 
     def add_at_head(self, data) -> bool:
         if (self.head == None):
             temp = Node(data)
-            head = temp
+            self.head = temp
 
         else:
             temp = Node(data)
-            temp.previous = head.previous
-            temp.next = head
-            head.previous.next=temp
-            head.previous = temp
-            head = temp
+            temp.previous = self.head.previous
+            temp.next = self.head
+            self.head.previous.next=temp
+            self.head.previous = temp
+            self.head = temp
 
 
     def add_at_index(self, index, data) -> bool:
         ind = 0
-        n = head
+        n = self.head
         while(1):
             if(index ==0):
                 if (self.head == None):
                     temp = Node(data)
-                    head = temp
+                    self.head = temp
 
                 else:
                     temp = Node(data)
-                    temp.previous = head.previous
-                    temp.next = head
-                    head.previous.next=temp
-                    head.previous = temp
-                    head = temp
+                    temp.previous = self.head.previous
+                    temp.next = self.head
+                    self.head.previous.next=temp
+                    self.head.previous = temp
+                    self.head = temp
 
             elif(index == ind):
                 break
@@ -72,7 +72,7 @@ class DoublyCircularLinkedList:
 
     def get(self, index) -> int:
         ind = 0
-        n = head
+        n = self.head
         while(1):
             if(index == ind):
                 break
@@ -85,7 +85,7 @@ class DoublyCircularLinkedList:
 
     def delete_at_index(self, index) -> bool:
         ind = 0
-        n = head
+        n = self.head
         while(1):
             if(index == ind):
                 break
