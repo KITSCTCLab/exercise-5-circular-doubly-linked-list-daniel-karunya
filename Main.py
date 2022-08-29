@@ -14,6 +14,8 @@ class DoublyCircularLinkedList:
         if (self.head == None):
             temp = Node(data)
             self.head = temp
+            temp.next = temp
+            temp.previous = temp
 
         else:
             temp = Node(data)
@@ -28,6 +30,8 @@ class DoublyCircularLinkedList:
         if (self.head == None):
             temp = Node(data)
             self.head = temp
+            temp.next = temp
+            temp.previous = temp
 
         else:
             temp = Node(data)
@@ -41,12 +45,14 @@ class DoublyCircularLinkedList:
 
     def add_at_index(self, index, data) -> bool:
         ind = 0
-        Node(n) = self.head
+        n = self.head
         while(1):
             if(index ==0):
                 if (self.head == None):
                     temp = Node(data)
                     self.head = temp
+                    temp.next = temp
+                    temp.previour = temp
                     break
 
                 else:
@@ -77,7 +83,7 @@ class DoublyCircularLinkedList:
 
     def get(self, index) -> int:
         ind = 0
-        Node(n) = self.head
+        n = self.head
         while(1):
             if(index == ind):
                 break
