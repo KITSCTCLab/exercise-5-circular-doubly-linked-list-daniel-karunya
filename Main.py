@@ -91,6 +91,10 @@ class DoublyCircularLinkedList:
 
 
     def get(self, index) -> int:
+
+        if (self.count < index):
+            return False
+        
         ind = 0
         n = self.head
         while(1):
