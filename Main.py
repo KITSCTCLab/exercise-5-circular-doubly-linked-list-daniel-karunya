@@ -11,7 +11,7 @@ class DoublyCircularLinkedList:
         self.count = -1
 
     def add_at_tail(self, data) -> bool:
-        obj.getall()
+        getall()
         print("") 
         print("")
         if (self.head == None):
@@ -28,14 +28,14 @@ class DoublyCircularLinkedList:
             self.head.previous = temp
         self.count = self.count+1
 
-            obj.getall()
+            getall()
             print("")
             print("")
         return True
 
 
     def add_at_head(self, data) -> bool:
-            obj.getall()
+            getall()
             print("")
             print("")
         if (self.head == None):
@@ -53,13 +53,13 @@ class DoublyCircularLinkedList:
             self.head = temp
         self.count = self.count+1
 
-        obj.getall()
+        getall()
         print("")
         print("")
         return True
 
     def add_at_index(self, index, data) -> bool:
-        obj.getall()
+        getall()
         print("")
         print("")
 
@@ -87,7 +87,7 @@ class DoublyCircularLinkedList:
         n.previous = temp
         self.count = self.count+1
 
-        obj.getall()
+        getall()
         print("")
         print("")
 
@@ -122,7 +122,7 @@ class DoublyCircularLinkedList:
 
     def delete_at_index(self, index) -> bool:
 
-        obj.getall()
+        getall()
         print("")
         print("")
 
@@ -150,7 +150,7 @@ class DoublyCircularLinkedList:
         self.count = self.count-1
         del n
 
-        obj.getall()
+        getall()
         print("")
         print("")
 
@@ -169,7 +169,7 @@ class DoublyCircularLinkedList:
 
                 
                 
-        obj.getall()
+        getall()
         print("")
         print("")
         return [n.previous.data , n.next.data]
@@ -203,9 +203,9 @@ for i in range(len(operations)):
     elif operations[i] == "add_at_index":
         result.append(obj.add_at_index(int(data[i][0]), data[i][1]))
     elif operations[i] == "get":
-        result.append(obj.get(data[i]))
+        result.append(get(data[i]))
     elif operations[i] == "get_previous_next":
-        result.append(obj.get_previous_next(data[i]))
+        result.append(get_previous_next(data[i]))
     elif operations[i] == 'delete_at_index':
         result.append(obj.delete_at_index(data[i]))
 
