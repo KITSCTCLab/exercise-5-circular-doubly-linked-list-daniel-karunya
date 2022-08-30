@@ -53,21 +53,7 @@ class DoublyCircularLinkedList:
         n = self.head
         while(1):
             if(index ==0):
-                if (self.head == None):
-                    temp = Node(data)
-                    self.head = temp
-                    temp.next = temp
-                    temp.previous = temp
-                    break
-
-                else:
-                    temp = Node(data)
-                    temp.previous = self.head.previous
-                    temp.next = self.head
-                    self.head.previous.next=temp
-                    self.head.previous = temp
-                    self.head = temp
-                    break
+                return add_at_head(data)
 
             elif(index == ind):
                 break
@@ -105,7 +91,7 @@ class DoublyCircularLinkedList:
     def getall(self) -> int:
 
         n = self.head
-        for z in range (0,self.count):
+        for(int x in range (0,self.size)):
             print (n)
             n = n.next
 
@@ -176,9 +162,7 @@ obj = DoublyCircularLinkedList()
 result = []
 for i in range(len(operations)):
     obj.getall()
-    print("")
-    print("")
-    
+
     if operations[i] == "add_at_head":
         result.append(obj.add_at_head(data[i]))
     elif operations[i] == "add_at_tail":
