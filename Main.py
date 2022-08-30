@@ -118,7 +118,6 @@ class DoublyCircularLinkedList:
             else:
                 ind = ind + 1
                 n = n.next
-                break
 
         n.previous.next = n.next
         n.next.previous = n.previous
@@ -176,3 +175,4 @@ for i in range(len(operations)):
         result.append(obj.delete_at_index(data[i]))
 
 print(result)
+
