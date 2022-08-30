@@ -105,7 +105,7 @@ class DoublyCircularLinkedList:
     def getall(self) -> int:
 
         n = self.head
-        for z in range (0,self.count):
+        for(int x in range (0,self.size)):
             print (n)
             n = n.next
 
@@ -175,6 +175,8 @@ for item in input_data.split(', '):
 obj = DoublyCircularLinkedList()
 result = []
 for i in range(len(operations)):
+    obj.getall()
+    
     if operations[i] == "add_at_head":
         result.append(obj.add_at_head(data[i]))
     elif operations[i] == "add_at_tail":
@@ -187,6 +189,5 @@ for i in range(len(operations)):
         result.append(obj.get_previous_next(data[i]))
     elif operations[i] == 'delete_at_index':
         result.append(obj.delete_at_index(data[i]))
-    obj.getall()
 
 print(result)
