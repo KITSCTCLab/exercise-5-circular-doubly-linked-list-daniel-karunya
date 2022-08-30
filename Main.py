@@ -91,6 +91,7 @@ class DoublyCircularLinkedList:
     def getall(self) -> int:
 
         n = self.head
+        print("head : ",self.head)
         for z in range (0,self.count):
             print (n,"  ",n.previous.data," ",n.data,"  ",n.next.data)
             n = n.next
