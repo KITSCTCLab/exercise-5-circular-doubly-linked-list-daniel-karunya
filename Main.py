@@ -23,7 +23,6 @@ class DoublyCircularLinkedList:
             temp.next = self.head
             self.head.previous.next=temp
             self.head.previous = temp
-        print(self.head,temp.data,temp.next,temp.next,"add tail")
         self.count = self.count+1
         return True
 
@@ -42,7 +41,6 @@ class DoublyCircularLinkedList:
             self.head.previous.next=temp
             self.head.previous = temp
             self.head = temp
-        print(self.head,temp.data,temp.next,temp.next,"add head")
         self.count = self.count+1
         return True
 
@@ -77,7 +75,6 @@ class DoublyCircularLinkedList:
             else:
                 ind = ind + 1
                 n = n.next
-                print(n)
                 
             
         temp = Node(data)
@@ -85,7 +82,6 @@ class DoublyCircularLinkedList:
         temp.next = n
         n.previous.next=temp
         n.previous = temp
-        print(self.head,temp.data,temp.next,temp.next,"add index",index,ind)
         self.count = self.count+1
         return True
 
