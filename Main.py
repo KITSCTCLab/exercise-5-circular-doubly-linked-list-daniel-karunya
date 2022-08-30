@@ -112,7 +112,7 @@ class DoublyCircularLinkedList:
 
         ind = 0
         n = self.head
-        while(1):
+        while(1):    
             if(index == ind):
                 break
             
@@ -120,6 +120,12 @@ class DoublyCircularLinkedList:
                 ind = ind + 1
                 n = n.next
 
+        if (index = 0):
+                if (self.count != 0):
+                    self.head = n.next
+                else:
+                    self.head = NULL
+    
         n.previous.next = n.next
         n.next.previous = n.previous
         self.count = self.count-1
