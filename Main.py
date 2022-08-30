@@ -11,10 +11,9 @@ class DoublyCircularLinkedList:
         self.count = -1
 
     def add_at_tail(self, data) -> bool:
-        for i in range(len(operations)):
-            obj.getall()
-            print("") 
-            print("")
+        obj.getall()
+        print("") 
+        print("")
         if (self.head == None):
             temp = Node(data)
             self.head = temp
@@ -29,7 +28,6 @@ class DoublyCircularLinkedList:
             self.head.previous = temp
         self.count = self.count+1
 
-        for i in range(len(operations)):
             obj.getall()
             print("")
             print("")
@@ -37,7 +35,6 @@ class DoublyCircularLinkedList:
 
 
     def add_at_head(self, data) -> bool:
-        for i in range(len(operations)):
             obj.getall()
             print("")
             print("")
@@ -56,18 +53,15 @@ class DoublyCircularLinkedList:
             self.head = temp
         self.count = self.count+1
 
-        for i in range(len(operations)):
-            obj.getall()
-            print("")
-            print("")
+        obj.getall()
+        print("")
+        print("")
         return True
 
     def add_at_index(self, index, data) -> bool:
-
-        for i in range(len(operations)):
-            obj.getall()
-            print("")
-            print("")
+        obj.getall()
+        print("")
+        print("")
 
         if (self.count < index):
             return False
@@ -93,10 +87,9 @@ class DoublyCircularLinkedList:
         n.previous = temp
         self.count = self.count+1
 
-        for i in range(len(operations)):
-            obj.getall()
-            print("")
-            print("")
+        obj.getall()
+        print("")
+        print("")
 
         return True
 
@@ -129,10 +122,9 @@ class DoublyCircularLinkedList:
 
     def delete_at_index(self, index) -> bool:
 
-        for i in range(len(operations)):
-            obj.getall()
-            print("")
-            print("")
+        obj.getall()
+        print("")
+        print("")
 
         if (self.count < index):
             return False
@@ -158,10 +150,9 @@ class DoublyCircularLinkedList:
         self.count = self.count-1
         del n
 
-        for i in range(len(operations)):
-            obj.getall()
-            print("")
-            print("")
+        obj.getall()
+        print("")
+        print("")
 
         return True
 
@@ -178,10 +169,9 @@ class DoublyCircularLinkedList:
 
                 
                 
-        for i in range(len(operations)):
-            obj.getall()
-            print("")
-            print("")
+        obj.getall()
+        print("")
+        print("")
         return [n.previous.data , n.next.data]
 
 # Do not change the following code
@@ -205,6 +195,7 @@ for item in input_data.split(', '):
 
 obj = DoublyCircularLinkedList()
 result = []
+for i in range(len(operations)):
     if operations[i] == "add_at_head":
         result.append(obj.add_at_head(data[i]))
     elif operations[i] == "add_at_tail":
