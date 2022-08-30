@@ -102,6 +102,12 @@ class DoublyCircularLinkedList:
                 ind = ind + 1
                 n = n.next
                 
+    def getall(self) -> int:
+
+        n = self.head
+        while(x in range (0,self.size)):
+            print (n)
+            n = n.next
 
 
 
@@ -181,5 +187,6 @@ for i in range(len(operations)):
         result.append(obj.get_previous_next(data[i]))
     elif operations[i] == 'delete_at_index':
         result.append(obj.delete_at_index(data[i]))
+    obj.getall()
 
 print(result)
