@@ -72,8 +72,7 @@ class DoublyCircularLinkedList:
                 ind = ind + 1
                 n = n.next
                 print(n)
-                if (ind == index):
-                    break
+                
             
         temp = Node(data)
         temp.previous = n.previous
@@ -94,7 +93,7 @@ class DoublyCircularLinkedList:
             else:
                 ind = ind + 1
                 n = n.next
-                break
+                
 
         return n.data
 
