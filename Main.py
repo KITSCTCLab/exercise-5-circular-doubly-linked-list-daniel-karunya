@@ -92,7 +92,7 @@ class DoublyCircularLinkedList:
 
         n = self.head
         for z in range (0,self.count):
-            print (n)
+            print (n,"  ",n.previous.data," ",n.data,"  ",n.next.data)
             n = n.next
 
 
