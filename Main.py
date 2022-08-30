@@ -114,6 +114,8 @@ class DoublyCircularLinkedList:
         n.previous.next = n.next
         n.next.previous = n.previous
 
+        return True
+
     def get_previous_next(self, index) -> list:
         ind = 0
         n = self.head
