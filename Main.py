@@ -28,16 +28,16 @@ class DoublyCircularLinkedList:
             self.head.previous = temp
         self.count = self.count+1
 
-            getall()
-            print("")
-            print("")
+        getall()
+        print("")
+        print("")
         return True
 
 
     def add_at_head(self, data) -> bool:
-            getall()
-            print("")
-            print("")
+        getall()
+        print("")
+        print("")
         if (self.head == None):
             temp = Node(data)
             self.head = temp
@@ -121,6 +121,7 @@ class DoublyCircularLinkedList:
 
 
     def delete_at_index(self, index) -> bool:
+
 
         getall()
         print("")
