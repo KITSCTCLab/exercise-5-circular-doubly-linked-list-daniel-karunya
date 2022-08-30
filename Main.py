@@ -95,6 +95,7 @@ class DoublyCircularLinkedList:
         n = self.head
         while(1):
             if(index == ind):
+                return n.data
                 break
             
             else:
@@ -102,7 +103,7 @@ class DoublyCircularLinkedList:
                 n = n.next
                 
 
-        return n.data
+
 
     def delete_at_index(self, index) -> bool:
 
