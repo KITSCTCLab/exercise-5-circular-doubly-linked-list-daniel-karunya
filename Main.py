@@ -11,7 +11,7 @@ class DoublyCircularLinkedList:
         self.count = 0
 
     def add_at_tail(self, data) -> bool:
-        print(self.head,"hi")
+        print(self.head,self.data,self.next,self.next,"add tail")
         if (self.head == None):
             temp = Node(data)
             self.head = temp
@@ -28,7 +28,7 @@ class DoublyCircularLinkedList:
 
 
     def add_at_head(self, data) -> bool:
-        print(self.head)
+        print(self.head,self.data,self.next,self.next,"add head")
         if (self.head == None):
             temp = Node(data)
             self.head = temp
@@ -48,6 +48,7 @@ class DoublyCircularLinkedList:
     def add_at_index(self, index, data) -> bool:
         ind = 0
         n = self.head
+        print(self.head,self.data,self.next,self.next,"add head")
         print(n)
         while(1):
             if(index ==0):
@@ -88,12 +89,14 @@ class DoublyCircularLinkedList:
     def get(self, index) -> int:
         ind = 0
         n = self.head
+        print(n)
         while(1):
             if(index == ind):
                 break
             
             else:
                 ind = ind + 1
+                print(n.next)
                 n = n.next
                 break
 
