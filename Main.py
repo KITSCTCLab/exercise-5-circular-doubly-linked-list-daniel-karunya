@@ -105,7 +105,7 @@ class DoublyCircularLinkedList:
     def getall(self) -> int:
 
         n = self.head
-        for z in range (0,self.size):
+        for z in range (0,self.count):
             print (n)
             n = n.next
 
