@@ -11,7 +11,7 @@ class DoublyCircularLinkedList:
         self.count = -1
 
     def add_at_tail(self, data) -> bool:
-        getall()
+        self.getall()
         print("") 
         print("")
         if (self.head == None):
@@ -28,14 +28,14 @@ class DoublyCircularLinkedList:
             self.head.previous = temp
         self.count = self.count+1
 
-        getall()
+        self.getall()
         print("")
         print("")
         return True
 
 
     def add_at_head(self, data) -> bool:
-        getall()
+        self.getall()
         print("")
         print("")
         if (self.head == None):
@@ -53,13 +53,13 @@ class DoublyCircularLinkedList:
             self.head = temp
         self.count = self.count+1
 
-        getall()
+        self.getall()
         print("")
         print("")
         return True
 
     def add_at_index(self, index, data) -> bool:
-        getall()
+        self.getall()
         print("")
         print("")
 
@@ -87,7 +87,7 @@ class DoublyCircularLinkedList:
         n.previous = temp
         self.count = self.count+1
 
-        getall()
+        self.getall()
         print("")
         print("")
 
@@ -123,7 +123,7 @@ class DoublyCircularLinkedList:
     def delete_at_index(self, index) -> bool:
 
 
-        getall()
+        self.getall()
         print("")
         print("")
 
@@ -151,7 +151,7 @@ class DoublyCircularLinkedList:
         self.count = self.count-1
         del n
 
-        getall()
+        self.getall()
         print("")
         print("")
 
@@ -170,7 +170,7 @@ class DoublyCircularLinkedList:
 
                 
                 
-        getall()
+        self.getall()
         print("")
         print("")
         return [n.previous.data , n.next.data]
