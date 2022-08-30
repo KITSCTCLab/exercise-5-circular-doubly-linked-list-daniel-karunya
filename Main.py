@@ -53,7 +53,7 @@ class DoublyCircularLinkedList:
         n = self.head
         while(1):
             if(index ==0):
-                return add_at_head(data)
+                return self.add_at_head(data)
 
             elif(index == ind):
                 break
