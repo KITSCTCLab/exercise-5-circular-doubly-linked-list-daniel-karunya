@@ -72,7 +72,8 @@ class DoublyCircularLinkedList:
                 ind = ind + 1
                 n = n.next
                 print(n)
-                break
+                if (ind == index):
+                    break
             
         temp = Node(data)
         temp.previous = n.previous
