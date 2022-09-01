@@ -36,8 +36,8 @@ class DoublyCircularLinkedList:
 
     def add_at_head(self, data) -> bool:
         self.getall()
-        print("b add at head")
-        print("")
+        #print("b add at head")
+        #print("")
         if (self.head == None):
             temp = Node(data)
             self.head = temp
@@ -54,14 +54,14 @@ class DoublyCircularLinkedList:
         self.count = self.count+1
 
         self.getall()
-        print("a add at head")
-        print("")
+        #print("a add at head")
+        #print("")
         return True
 
     def add_at_index(self, index, data) -> bool:
         self.getall()
-        print("b add at index ",index)
-        print("")
+        #print("b add at index ",index)
+        #print("")
 
         if (self.count < index):
             return False
@@ -88,8 +88,8 @@ class DoublyCircularLinkedList:
         self.count = self.count+1
 
         self.getall()
-        print("a add at index",index)
-        print("")
+        #print("a add at index",index)
+        #print("")
 
         return True
 
@@ -113,9 +113,9 @@ class DoublyCircularLinkedList:
     def getall(self) -> int:
 
         n = self.head
-        #rint("head : ",self.head)
+        print("head : ",self.head)
         for z in range (0,(self.count+1)):
-            #print (n,"  ",n.previous.data," ",n.data,"  ",n.next.data)
+            print (n,"  ",n.previous.data," ",n.data,"  ",n.next.data)
             n = n.next
 
 
@@ -124,8 +124,8 @@ class DoublyCircularLinkedList:
 
 
         self.getall()
-        print("")
-        print("")
+        #print("")
+        #print("")
 
         if (self.count < index):
             return False
@@ -152,8 +152,8 @@ class DoublyCircularLinkedList:
         del n
 
         self.getall()
-        print("")
-        print("")
+        #print("")
+        #print("")
 
         return True
 
@@ -170,9 +170,9 @@ class DoublyCircularLinkedList:
 
                 
                 
-        self.self.getall()
-        print("")
-        print("")
+        self.getall()
+        #print("")
+        #print("")
         return [n.previous.data , n.next.data]
 
 
