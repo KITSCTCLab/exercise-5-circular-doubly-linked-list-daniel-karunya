@@ -11,9 +11,7 @@ class DoublyCircularLinkedList:
         self.count = -1
 
     def add_at_tail(self, data) -> bool:
-        self.getall()
-        print("b_add at tail") 
-        print("")
+    
         if (self.head == None):
             temp = Node(data)
             self.head = temp
@@ -28,16 +26,12 @@ class DoublyCircularLinkedList:
             self.head.previous = temp
         self.count = self.count+1
 
-        self.getall()
-        print("a add at tail")
-        print("")
+        
         return True
 
 
     def add_at_head(self, data) -> bool:
-        self.getall()
-        #print("b add at head")
-        #print("")
+
         if (self.head == None):
             temp = Node(data)
             self.head = temp
@@ -53,15 +47,9 @@ class DoublyCircularLinkedList:
             self.head = temp
         self.count = self.count+1
 
-        self.getall()
-        #print("a add at head")
-        #print("")
         return True
 
     def add_at_index(self, index, data) -> bool:
-        self.getall()
-        #print("b add at index ",index)
-        #print("")
 
         if (self.count < index):
             return False
@@ -87,10 +75,7 @@ class DoublyCircularLinkedList:
         n.previous = temp
         self.count = self.count+1
 
-        self.getall()
-        #print("a add at index",index)
-        #print("")
-
+ 
         return True
 
 
@@ -109,23 +94,11 @@ class DoublyCircularLinkedList:
             else:
                 ind = ind + 1
                 n = n.next
-                
-    def getall(self) -> int:
-
-        n = self.head
-        print("head : ",self.head)
-        for z in range (0,(self.count+1)):
-            print (n,"  ",n.previous.data," ",n.data,"  ",n.next.data)
-            n = n.next
-
+           
 
 
     def delete_at_index(self, index) -> bool:
 
-
-        self.getall()
-        #print("")
-        #print("")
 
         if (self.count < index):
             return False
@@ -151,10 +124,6 @@ class DoublyCircularLinkedList:
         self.count = self.count-1
         del n
 
-        self.getall()
-        #print("")
-        #print("")
-
         return True
 
     def get_previous_next(self, index) -> list:
@@ -168,11 +137,6 @@ class DoublyCircularLinkedList:
                 ind = ind + 1
                 n = n.next
 
-                
-                
-        self.getall()
-        #print("")
-        #print("")
         return [n.previous.data , n.next.data]
 
 
