@@ -12,7 +12,7 @@ class DoublyCircularLinkedList:
 
     def add_at_tail(self, data) -> bool:
         self.getall()
-        print("") 
+        print("b_add at tail") 
         print("")
         if (self.head == None):
             temp = Node(data)
@@ -29,14 +29,14 @@ class DoublyCircularLinkedList:
         self.count = self.count+1
 
         self.getall()
-        print("")
+        print("a add at tail")
         print("")
         return True
 
 
     def add_at_head(self, data) -> bool:
         self.getall()
-        print("")
+        print("b add at head")
         print("")
         if (self.head == None):
             temp = Node(data)
@@ -54,13 +54,13 @@ class DoublyCircularLinkedList:
         self.count = self.count+1
 
         self.getall()
-        print("")
+        print("a add at head")
         print("")
         return True
 
     def add_at_index(self, index, data) -> bool:
         self.getall()
-        print("")
+        print("b add at index ",index)
         print("")
 
         if (self.count < index):
@@ -88,7 +88,7 @@ class DoublyCircularLinkedList:
         self.count = self.count+1
 
         self.getall()
-        print("")
+        print("a add at index",index)
         print("")
 
         return True
@@ -104,7 +104,7 @@ class DoublyCircularLinkedList:
         while(1):
             if(index == ind):
                 return n.data
-                break
+                
             
             else:
                 ind = ind + 1
@@ -113,9 +113,9 @@ class DoublyCircularLinkedList:
     def getall(self) -> int:
 
         n = self.head
-        print("head : ",self.head)
-        for z in range (0,self.count):
-            print (n,"  ",n.previous.data," ",n.data,"  ",n.next.data)
+        #rint("head : ",self.head)
+        for z in range (0,(self.count+1)):
+            #print (n,"  ",n.previous.data," ",n.data,"  ",n.next.data)
             n = n.next
 
 
@@ -144,7 +144,7 @@ class DoublyCircularLinkedList:
                 if (self.count != 0):
                     self.head = n.next
                 else:
-                    self.head = NULL
+                    self.head = None
     
         n.previous.next = n.next
         n.next.previous = n.previous
@@ -170,12 +170,13 @@ class DoublyCircularLinkedList:
 
                 
                 
-        self.getall()
+        self.self.getall()
         print("")
         print("")
         return [n.previous.data , n.next.data]
 
-# Do not change the following code
+
+#do not change the code below
 operations = []
 for specific_operation in input().split(','):
     operations.append(specific_operation.strip())
@@ -204,10 +205,12 @@ for i in range(len(operations)):
     elif operations[i] == "add_at_index":
         result.append(obj.add_at_index(int(data[i][0]), data[i][1]))
     elif operations[i] == "get":
-        result.append(get(data[i]))
+        result.append(obj.get(data[i]))
     elif operations[i] == "get_previous_next":
-        result.append(get_previous_next(data[i]))
+        result.append(obj.get_previous_next(data[i]))
     elif operations[i] == 'delete_at_index':
         result.append(obj.delete_at_index(data[i]))
 
 print(result)
+
+
